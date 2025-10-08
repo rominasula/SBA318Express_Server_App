@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Morning Gratitude",
+    "category": "Gratitude",
+    "mood": "Calm",
+    "reflection": "Woke up early and felt grateful for a quiet morning.",
+    "date": "2025-10-07"
+  },
+  {
+    "id": 2,
+    "title": "Evening Reflection",
+    "category": "Reflection",
+    "mood": "Content",
+    "reflection": "Ended the day with a peaceful walk.",
+    "date": "2025-10-06"
+  }
+]
