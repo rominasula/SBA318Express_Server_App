@@ -14,5 +14,13 @@
     "mood": "Content",
     "reflection": "Ended the day with a peaceful walk.",
     "date": "2025-10-06"
+  },
+  {
+    "id": 3,
+    "title": "Happy",
+    "category": "Gratitute",
+    "mood": "Calm",
+    "reflection": "I'm feeling very well today",
+    "date": "2025-10-08"
   }
 ]
