@@ -5,12 +5,17 @@ const path = require("path");
 const logger = require("./middleware/logger.js");
 const errorHandler = require("./middleware/errorHandler.js");
 const momentsRouter = require("./routes/moments.js");
+const usersRouter = require("./routes/users");
+const moodsRouter = require("./routes/moods");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/users", usersRouter);
+app.use("/moods", moodsRouter);
 
 // Custom middleware
 app.use(logger);

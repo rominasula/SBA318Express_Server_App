@@ -1,0 +1,6 @@
+[
+  { "id": 1, "mood": "Happy" },
+  { "id": 2, "mood": "Calm" },
+  { "id": 3, "mood": "Stressed" },
+  { "id": 4, "mood": "Content" }
+]

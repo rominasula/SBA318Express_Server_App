@@ -1,3 +1,5 @@
+//plain JavaScript function that returns the HTML code as a string
+
 function addMomentPage() {
   return `
     <h2>Add a New Mindful Moment</h2>
