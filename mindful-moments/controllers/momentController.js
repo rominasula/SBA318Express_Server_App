@@ -22,9 +22,13 @@ function writeData(data) {
 }
 
 // GET all moments
+// GET all moments
 exports.getAllMoments = (req, res) => {
   const { category, mood, api } = req.query;
   let moments = readData();
+
+  // Remove duplicates based on title + date
+  moments = [...new Map(moments.map(m => [m.title + m.date, m])).values()];
 
   if (category) {
     moments = moments.filter(m => m.category.toLowerCase() === category.toLowerCase());
@@ -37,6 +41,7 @@ exports.getAllMoments = (req, res) => {
 
   res.render("layout", { body: indexPage(moments) }); // Browser HTML
 };
+
 
 // POST a new moment
 exports.addMoment = (req, res) => {
