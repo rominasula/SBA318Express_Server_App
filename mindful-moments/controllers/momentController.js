@@ -4,17 +4,26 @@ const indexPage = require("../views/index");
 const addMomentPage = require("../views/addMoment");
 const filePath = path.join(__dirname, "../data/moments.json");
 
+// Safe read: returns [] if file missing or empty
 function readData() {
-  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  } catch (err) {
+    return [];
+  }
 }
 
 function writeData(data) {
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  try {
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (err) {
+    console.error("Error writing data:", err);
+  }
 }
 
 // GET all moments
 exports.getAllMoments = (req, res) => {
-  const { category, mood, api } = req.query; // new query param 'api'
+  const { category, mood, api } = req.query;
   let moments = readData();
 
   if (category) {
@@ -24,12 +33,9 @@ exports.getAllMoments = (req, res) => {
     moments = moments.filter(m => m.mood.toLowerCase() === mood.toLowerCase());
   }
 
-  if (api === "true") {
-    return res.json(moments); // API request returns JSON
-  }
+  if (api === "true") return res.json(moments); // API JSON response
 
-  // Browser request returns HTML
-  res.render("layout", { body: indexPage(moments) });
+  res.render("layout", { body: indexPage(moments) }); // Browser HTML
 };
 
 // POST a new moment
@@ -37,7 +43,18 @@ exports.addMoment = (req, res) => {
   const moments = readData();
   const { title, category, mood, reflection, api } = req.body;
 
-  if (!title || !reflection) return res.status(400).json({ error: "Title and reflection are required." });
+  if (!title || !reflection) {
+    if (api === "true") return res.status(400).json({ error: "Title and reflection are required." });
+    return res.status(400).send("Title and reflection are required.");
+  }
+
+  // Prevent duplicate moments on the same date
+  const today = new Date().toLocaleDateString();
+  const exists = moments.some(m => m.title === title && m.date === today);
+  if (exists) {
+    if (api === "true") return res.status(409).json({ error: "This moment already exists today." });
+    return res.status(409).send("This moment already exists today.");
+  }
 
   const newMoment = {
     id: moments.length ? moments[moments.length - 1].id + 1 : 1,
@@ -45,17 +62,15 @@ exports.addMoment = (req, res) => {
     category: category || "General",
     mood: mood || "Neutral",
     reflection,
-    date: new Date().toLocaleDateString(),
+    date: today,
   };
 
   moments.push(newMoment);
   writeData(moments);
 
-  if (api === "true") {
-    return res.status(201).json(newMoment); // API returns JSON
-  }
+  if (api === "true") return res.status(201).json(newMoment); // JSON for API
 
-  res.redirect("/moments"); // Browser: redirect
+  res.redirect("/moments"); // Browser redirect
 };
 
 // PATCH (update) a moment
@@ -63,22 +78,33 @@ exports.updateMoment = (req, res) => {
   const moments = readData();
   const momentId = parseInt(req.params.id);
   const moment = moments.find(m => m.id === momentId);
+
   if (!moment) return res.status(404).json({ error: "Moment not found." });
 
-  Object.assign(moment, req.body);
+  // Only update allowed fields
+  const { title, category, mood, reflection } = req.body;
+  if (title) moment.title = title;
+  if (category) moment.category = category;
+  if (mood) moment.mood = mood;
+  if (reflection) moment.reflection = reflection;
+
   writeData(moments);
 
-  res.json(moment); // Always JSON for PATCH
+  res.json(moment);
 };
 
 // DELETE a moment
 exports.deleteMoment = (req, res) => {
   let moments = readData();
   const momentId = parseInt(req.params.id);
+
+  const deleted = moments.find(m => m.id === momentId);
+  if (!deleted) return res.status(404).json({ error: "Moment not found." });
+
   moments = moments.filter(m => m.id !== momentId);
   writeData(moments);
 
-  res.json({ message: `Moment ${momentId} deleted.` }); // JSON response
+  res.json({ message: `Moment ${momentId} deleted.` });
 };
 
 // Show the "Add Moment" form (HTML only)
