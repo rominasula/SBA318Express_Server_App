@@ -1,21 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "Evening Reflection",
-    "category": "Reflection",
-    "mood": "Content",
-    "reflection": "Ended the day with a peaceful walk.",
-    "date": "06/10/2025"
-  },
-  {
-    "id": 2,
-    "title": "Happy",
-    "category": "Gratitude",
-    "mood": "Calm",
-    "reflection": "I'm feeling very well today",
-    "date": "08/10/2025"
-  },
-  {
     "id": 3,
     "title": "Morning Meditation",
     "category": "Mindfulness",
@@ -29,6 +13,182 @@
     "category": "Wellness",
     "mood": "Relaxed",
     "reflection": "Felt energized",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 5,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 6,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 7,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 8,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 9,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 10,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 11,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 12,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 13,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 14,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 15,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 16,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 17,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 18,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 19,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 20,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 21,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 22,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 23,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 24,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 25,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 26,
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
     "date": "10/10/2025"
   }
 ]
