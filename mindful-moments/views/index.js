@@ -6,13 +6,15 @@ function indexPage(moments) {
     <a href="/moments/new">Add a New Moment</a>
     <h2>All Moments</h2>
     <ul>
-
       ${moments.map(m => `
         <li>
           <strong>${m.title}</strong> 
           <em>(${m.category} - ${m.mood})</em><br>
           ${m.reflection}<br>
-          <small>${m.date}</small>
+          <small>${m.date}</small><br>
+          <form action="/moments/${m.id}?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+          </form>
         </li>
       `).join('')}
     </ul>
@@ -20,3 +22,5 @@ function indexPage(moments) {
 }
 
 module.exports = indexPage;
+
+

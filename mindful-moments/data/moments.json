@@ -1,26 +1,34 @@
 [
   {
     "id": 1,
-    "title": "Morning Gratitude",
-    "category": "Gratitude",
-    "mood": "Calm",
-    "reflection": "Woke up early and felt grateful for a quiet morning.",
-    "date": "2025-10-07"
-  },
-  {
-    "id": 2,
     "title": "Evening Reflection",
     "category": "Reflection",
     "mood": "Content",
     "reflection": "Ended the day with a peaceful walk.",
-    "date": "2025-10-06"
+    "date": "06/10/2025"
+  },
+  {
+    "id": 2,
+    "title": "Happy",
+    "category": "Gratitude",
+    "mood": "Calm",
+    "reflection": "I'm feeling very well today",
+    "date": "08/10/2025"
   },
   {
     "id": 3,
-    "title": "Happy",
-    "category": "Gratitute",
-    "mood": "Calm",
-    "reflection": "I'm feeling very well today",
-    "date": "2025-10-08"
+    "title": "Morning Meditation",
+    "category": "Mindfulness",
+    "mood": "Relaxed",
+    "reflection": "Felt calm and focused",
+    "date": "10/10/2025"
+  },
+  {
+    "id": 4,
+    "title": "Morning Yoga",
+    "category": "Wellness",
+    "mood": "Relaxed",
+    "reflection": "Felt energized",
+    "date": "10/10/2025"
   }
 ]
